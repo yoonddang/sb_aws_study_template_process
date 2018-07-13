@@ -1,0 +1,10 @@
+atomikos.logBaseName=real_template_process
+atomikos.tmUniqueName=real_template_process
+
+templateMySql.jdbc.url=jdbc:mysql://hanteo.cpynrs4nqaob.ap-northeast-2.rds.amazonaws.com:3306/HanteoChart?characterEncoding=utf8
+templateMySql.jdbc.id=HanteoAdmin
+templateMySql.jdbc.pass=hanteo1004
+
+templateMsSql.jdbc.url=jdbc:sqlserver://203.229.182.140:1433;DatabaseName=Hanteo
+templateMsSql.jdbc.id=dev
+templateMsSql.jdbc.pass=hanteo!@#chart
