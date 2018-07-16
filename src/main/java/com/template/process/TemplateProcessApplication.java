@@ -12,9 +12,9 @@ import org.springframework.cache.annotation.EnableCaching;
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, SolrAutoConfiguration.class, RabbitAutoConfiguration.class})
 @EnableCaching
 @EnableDatasource
-public class HnateoProcessApplication {
+public class TemplateProcessApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HnateoProcessApplication.class, args);
+		SpringApplication.run(TemplateProcessApplication.class, args);
 	}
 }

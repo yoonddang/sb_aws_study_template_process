@@ -1,10 +1,10 @@
 atomikos.logBaseName=dev_template_process
 atomikos.tmUniqueName=dev_template_process
 
-templateMySql.jdbc.url=jdbc:mysql://hanteochart.cpynrs4nqaob.ap-northeast-2.rds.amazonaws.com:3306/HanteoChart?characterEncoding=utf8
-templateMySql.jdbc.id=HanteoAdmin
-templateMySql.jdbc.pass=hanteo1004
+templateMySql.jdbc.url=jdbc:mysql://spawstemplate.cgthxtujqxgz.ap-northeast-2.rds.amazonaws.com:3306/Template?characterEncoding=utf8
+templateMySql.jdbc.id=templateAdmin
+templateMySql.jdbc.pass=template1234
 
-templateMsSql.jdbc.url=jdbc:sqlserver://203.229.182.140:1433;DatabaseName=Hanteo
+templateMsSql.jdbc.url=jdbc:sqlserver://111.111.111.111:1433;DatabaseName=template
 templateMsSql.jdbc.id=dev
-templateMsSql.jdbc.pass=hanteo!@#chart
+templateMsSql.jdbc.pass=template1234
