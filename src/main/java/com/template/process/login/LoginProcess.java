@@ -27,6 +27,9 @@ public class LoginProcess implements LoginStubBO {
 		//이메일로 로그인하기
 		ResultInfo resultInfo = templateUserBO.checkUserByUsername(hanteoUser.getEmail(),	hanteoUser.getPass_word());
 
+
+		ResultInfo result = new ResultInfo();
+
 		return JsonUtils.toJson(resultInfo);
 	}
 
