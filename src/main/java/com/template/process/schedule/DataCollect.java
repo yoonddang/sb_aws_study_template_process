@@ -30,32 +30,15 @@ public class DataCollect extends AbstractBaseCollect<DataVO> {
 		this.DataDAO = DataDAO;
 	}
 
-	private void onReadTarget(String date, String hour) {
-		this.date = date;
-		this.hour = hour;
-		this.readTarget = true;
-	}
-
-	private void offReadTarget() {
-		this.readTarget = false;
-	}
-
 	@Override
 	protected List<DataVO> read() throws IOException {
-		if(readTarget) {
-			return read(this.date, this.hour);
-		} else {
-			return read(getNowDateString(), getNowDateToString("HH"));
-		}
-	}
-
-	protected List<DataVO> read(String date, String hour) throws IOException {
 		/**
 		 * return DataDAO.조회메소드
 		 *
 		 * 크롤링을 하게된다면 이곳에 관련 메소드 혹은 클래스 호출
 		 * 로우 데이터 생성
 		 */
+		return readData;
 	}
 
 	@Override
@@ -96,7 +79,6 @@ public class DataCollect extends AbstractBaseCollect<DataVO> {
 
 	//@Scheduled(cron = "0 15/20 7-23 * * ?")
 	public void dataTask() {
-		offReadTarget();
 		setJobName(BatchConstants.JOB_DATA);
 		setBulk(false);
 		doCollectTask();
@@ -105,7 +87,6 @@ public class DataCollect extends AbstractBaseCollect<DataVO> {
 	//@Scheduled(cron = "0 20/20 7-23 * * ?")
 	//@Scheduled(cron = "0 34 * * * ?")
 	public void bulkDataTask() {
-		offReadTarget();
 		setJobName(BatchConstants.JOB_DATA);
 		setBulk(true);
 		doCollectTask();
